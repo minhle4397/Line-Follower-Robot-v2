@@ -1,0 +1,8 @@
+{
+    "files.associations": { "*.h": "c" },
+    "editor.inlineSuggest.enabled": false,
+    "github.copilot.enable": { "*": false },
+    "workbench.editor.empty.hint": "hidden",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true
+}
