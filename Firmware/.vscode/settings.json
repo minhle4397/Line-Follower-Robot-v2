@@ -4,5 +4,6 @@
     "github.copilot.enable": { "*": false },
     "workbench.editor.empty.hint": "hidden",
     "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "cmake.sourceDirectory": "/home/minhle/dev/Line-Follower-Robot-v2/Firmware/tests"
 }
