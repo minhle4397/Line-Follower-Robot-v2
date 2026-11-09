@@ -26,8 +26,16 @@ test_main.c
 test_line_algo.c
 test_pid.c)
 
+
 target_compile_options(unit_tests PRIVATE -Wall -Wextra -Werror)
 target_link_libraries(unit_tests PRIVATE lf_logic unity)
 
+add_executable(sim ${ROOT}/sim/sim.c)
+target_include_directories(sim PRIVATE ${ROOT}/App)
+target_compile_options(sim PRIVATE ${WARNING})
+target_link_libraries(sim PRIVATE lf_logic m)
+
 enable_testing()
 add_test(NAME unit_tests COMMAND unit_tests)
+add_test(NAME sim_converges COMMAND sim)
+

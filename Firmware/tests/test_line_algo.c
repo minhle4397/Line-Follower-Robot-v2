@@ -23,7 +23,7 @@ static void test_center(void){
 static void test_far_left_and_far_right(void){
     LineCal_t cal = make_cal(false);
     const uint16_t left[LINE_N] = {3000, 200, 200, 200, 200};
-    const uint16_t right[LINE_N] = {200, 200, 200, 200, 200};
+    const uint16_t right[LINE_N] = {200, 200, 200, 200, 3000};
     int16_t pos = 0;
     TEST_ASSERT_TRUE(LineAlgo_Position(&cal, left, &pos));
     TEST_ASSERT_EQUAL_INT16(-2000, pos);
@@ -76,9 +76,9 @@ static void test_normalize_clamps(void){
     LineAlgo_Normalize(&cal, raw, n);
     TEST_ASSERT_EQUAL_INT16(0, n[0]);
     TEST_ASSERT_EQUAL_INT16(0, n[1]);
-    TEST_ASSERT_EQUAL_INT16(0, n[2]);
-    TEST_ASSERT_EQUAL_INT16(0, n[3]);
-    TEST_ASSERT_EQUAL_INT16(0, n[4]);
+    TEST_ASSERT_EQUAL_INT16(500, n[2]);
+    TEST_ASSERT_EQUAL_INT16(1000, n[3]);
+    TEST_ASSERT_EQUAL_INT16(1000, n[4]);
 }
 
 static void test_is_calibrated(void){

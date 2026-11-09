@@ -1,3 +1,4 @@
 build/
 tests/scratch_*
 .vscode/
+*.csv
